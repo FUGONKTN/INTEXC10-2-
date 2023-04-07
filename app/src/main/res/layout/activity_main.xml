@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+
+<com.yandex.mapkit.mapview.MapView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mapview"
+>
+
+    <LinearLayout
+        android:id="@+id/QuestionHolder"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#000000">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Answer1"
+            android:minHeight="60dp"
+            android:background="#000000"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="60dp"
+            android:text="Answer2"
+            android:background="#000000"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="60"
+            android:inputType="textPersonName"
+            android:minHeight="50dp"
+            android:text="Name"
+            android:background="#000000"/>
+
+    </LinearLayout>
+</com.yandex.mapkit.mapview.MapView>
+
+</LinearLayout>
