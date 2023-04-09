@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKitFactory;
@@ -15,6 +16,10 @@ import com.yandex.mapkit.mapview.MapView;
 
 public class MapActivity extends AppCompatActivity {
     private MapView mapView;
+    EditText t1;
+    EditText t2;
+    EditText t3;
+    Button Answercheck;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,11 @@ public class MapActivity extends AppCompatActivity {
                 mapView.getMap().getMapObjects().addPlacemark(mappoint);
                 mapView.getMap().getMapObjects().addPlacemark(mappoint2);
                 mapView.getMap().getMapObjects().addPlacemark(mappoint3);
+                t1 = findViewById(R.id.QuestionOne);
+                t2 = findViewById(R.id.QuestionTwo);
+                t3 = findViewById(R.id.QuestionThree);
+                Answercheck = findViewById(R.id.AnswerCheck);
+
     }
     @Override
     protected void onStop() {
