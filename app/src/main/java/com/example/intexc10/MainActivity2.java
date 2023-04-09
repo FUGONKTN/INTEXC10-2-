@@ -17,7 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         btn = findViewById(R.id.button2);
         btn.setOnClickListener(v -> {
-            Intent in = new Intent(MainActivity2.this, MapActivity.class);
+            Intent in = new Intent(MainActivity2.this, ChooseExc   .class);
             startActivity(in);
         });
     }

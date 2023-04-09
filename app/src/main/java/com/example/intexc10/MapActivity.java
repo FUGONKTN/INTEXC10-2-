@@ -2,6 +2,7 @@ package com.example.intexc10;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +41,18 @@ public class MapActivity extends AppCompatActivity {
                 t2 = findViewById(R.id.QuestionTwo);
                 t3 = findViewById(R.id.QuestionThree);
                 Answercheck = findViewById(R.id.AnswerCheck);
+                String ansone = String.valueOf(t1.getText());
+                String anstwo = String.valueOf(t2.getText());
+                String ansthree = String.valueOf(t3.getText());
+                Answercheck.setOnClickListener(v -> {
+                    Intent intent = new Intent(this, CheckActivity.class);
+                    intent.putExtra("t1", ansone);
+                    intent.putExtra("t2", anstwo);
+                    intent.putExtra("t3", anstwo);
+                    startActivity(intent);
+                });
+
+
 
     }
     @Override
