@@ -1,6 +1,9 @@
 package com.example.intexc10;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,3 +22,5 @@ public class ChooseExc extends AppCompatActivity {
         });
     }
 }
+
+
