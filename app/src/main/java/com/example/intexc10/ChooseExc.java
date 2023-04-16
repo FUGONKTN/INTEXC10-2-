@@ -15,11 +15,13 @@ import java.util.List;
 
 public class ChooseExc extends AppCompatActivity {
     Button excone;
+    ExcursionDao excursionDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_exc);
         excone = findViewById(R.id.exconebutton);
+        excursionDao = ((IntexcApplication) getApplication()).excursionDao;
         excone.setOnClickListener(v -> {
             Intent intent = new Intent(this, MapActivity.class);
             startActivity(intent);

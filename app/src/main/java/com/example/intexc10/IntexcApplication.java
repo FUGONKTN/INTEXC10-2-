@@ -14,7 +14,9 @@ public class IntexcApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         MapKitFactory.setApiKey("4f697435-bb41-4f3a-a999-4265dee587be");
+
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "Excursions").build();
         excursionDao = db.excursionDao();
         Excursion exc1 = new Excursion();
