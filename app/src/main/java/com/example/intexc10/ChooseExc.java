@@ -29,6 +29,7 @@ public class ChooseExc extends AppCompatActivity {
             startActivity(intent);
         });
         ArrayAdapter<String> namesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
+
     }
 }
 
