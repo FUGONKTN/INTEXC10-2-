@@ -1,34 +1,24 @@
 package com.example.intexc10;
 
 import androidx.room.ColumnInfo;
+import androidx.room.Database;
+import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+import androidx.room.RoomDatabase;
+
+import java.util.List;
+
 @Entity
 public class Excursion {
+        @Embedded public List<Question> questions;
 
         @PrimaryKey
-        public int uid;
+        public int ExcId;
 
         @ColumnInfo(name = "Name")
         public String name;
-
-        @ColumnInfo(name = "QuestionOne")
-        public String quest1;
-
-        @ColumnInfo(name = "QuestionTwo")
-        public String quest2;
-
-        @ColumnInfo(name = "QuestionThree")
-        public String quest3;
-
-        @ColumnInfo(name = "AnswerOne")
-        public String ans1;
-
-        @ColumnInfo(name = "AnswerTwo")
-        public String ans2;
-
-        @ColumnInfo(name = "AnswerThree")
-        public String ans3;
 
         @ColumnInfo(name = "LatitudeOne")
         public double latitude1;
@@ -48,3 +38,4 @@ public class Excursion {
         @ColumnInfo(name = "LongitudeThree")
         public double longitude3;
 }
+

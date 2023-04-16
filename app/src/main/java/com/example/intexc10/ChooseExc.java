@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChooseExc extends AppCompatActivity {
     Button excone;
