@@ -8,6 +8,7 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class ChooseExc extends AppCompatActivity {
     ExcursionDao excursionDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String[] names = {"Тестовая экскурсия", "Ещё тестовая экскурсия"};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_exc);
         excone = findViewById(R.id.exconebutton);
@@ -26,6 +28,7 @@ public class ChooseExc extends AppCompatActivity {
             Intent intent = new Intent(this, MapActivity.class);
             startActivity(intent);
         });
+        ArrayAdapter<String> namesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
     }
 }
 
