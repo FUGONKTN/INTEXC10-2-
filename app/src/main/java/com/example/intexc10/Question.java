@@ -10,6 +10,12 @@ public class Question {
     public int QuestId;
     @ColumnInfo(name = "Question")
     public String question;
-    @ColumnInfo(name = "Answers")
-    public String[] answers;
+    @ColumnInfo(name = "WrongAnsOne")
+    public String wrans1;
+    @ColumnInfo(name = "WrongAnsTwo")
+    public String wrans2;
+    @ColumnInfo(name = "RightAns")
+    public String rightans;
+    @ColumnInfo(name = "RightAnswerIndex")
+    public int indexright;
 }

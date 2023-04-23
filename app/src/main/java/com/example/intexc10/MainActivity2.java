@@ -12,6 +12,7 @@ import android.widget.Button;
 import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
+
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         btn = findViewById(R.id.button2);
         btn.setOnClickListener(v -> {
-            Intent in = new Intent(MainActivity2.this, ChooseExc   .class);
+            Intent in = new Intent(MainActivity2.this, ChooseExc.class);
             startActivity(in);
         });
     }

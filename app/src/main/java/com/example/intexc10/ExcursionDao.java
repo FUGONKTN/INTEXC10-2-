@@ -22,6 +22,12 @@ public interface ExcursionDao {
     String[] getAnswers(int id);
     @Query("SELECT LatitudeOne, LongitudeOne, LatitudeTwo, LongitudeTwo, LatitudeThree, LongitudeThree FROM Excursion WHERE ExcId = :id")
     List<Double> getPoints(int id);
+    @Query("SELECT RightAnswerIndex FROM Question WHERE QuestId = :id")
+    Integer getRightAnswer(int id);
+    @Query("SELECT WrongAnsOne, WrongAnsTwo FROM Question WHERE QuestId = :id")
+    List<String> getWrongAnswers(int id);
+    @Query("SELECT RightAns FROM Question WHERE QuestId = :id")
+    String getRightAns(int id);
     @Insert
     void insert(Excursion... excursions);
     @Delete
