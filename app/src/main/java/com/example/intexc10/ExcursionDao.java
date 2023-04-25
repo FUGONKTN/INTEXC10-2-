@@ -18,14 +18,24 @@ public interface ExcursionDao {
     String getName(int id);
     @Query("SELECT question  FROM Question WHERE QuestId = :id")
     String getQuestion(int id);
-    @Query("SELECT answers FROM Question WHERE QuestId = :id")
-    String[] getAnswers(int id);
-    @Query("SELECT LatitudeOne, LongitudeOne, LatitudeTwo, LongitudeTwo, LatitudeThree, LongitudeThree FROM Excursion WHERE ExcId = :id")
-    List<Double> getPoints(int id);
+    @Query("SELECT LatitudeOne FROM Excursion WHERE ExcId = :id")
+    Double getLatOne(int id);
+    @Query("SELECT LongitudeOne FROM Excursion WHERE ExcId = :id")
+    Double getLongOne(int id);
+    @Query("SELECT LatitudeTwo FROM EXCURSION WHERE ExcId = :id")
+    Double getLatTwo(int id);
+    @Query("SELECT LongitudeTwo FROM EXCURSION WHERE ExcId = :id")
+    Double getLongTwo(int id);
+    @Query("SELECT LatitudeThree FROM Excursion WHERE ExcId = :id")
+    Double getLatThree(int id);
+    @Query("SELECT LatitudeThree FROM excursion WHERE ExcId = :id")
+    Double getLongThree(int id);
     @Query("SELECT RightAnswerIndex FROM Question WHERE QuestId = :id")
     Integer getRightAnswer(int id);
-    @Query("SELECT WrongAnsOne, WrongAnsTwo FROM Question WHERE QuestId = :id")
-    List<String> getWrongAnswers(int id);
+    @Query("SELECT WrongAnsOne FROM Question WHERE QuestId = :id")
+    String getWrOne(int id);
+    @Query("SELECT WrongAnsTwo FROM Question WHERE QuestId = :id")
+    String getWrTwo(int id);
     @Query("SELECT RightAns FROM Question WHERE QuestId = :id")
     String getRightAns(int id);
     @Insert

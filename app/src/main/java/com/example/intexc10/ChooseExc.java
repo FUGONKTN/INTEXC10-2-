@@ -35,7 +35,7 @@ public class ChooseExc extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View V, int position, long id){
         Toast.makeText(this, position, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, (int)id, Toast.LENGTH_SHORT).show();
 
     }
 }

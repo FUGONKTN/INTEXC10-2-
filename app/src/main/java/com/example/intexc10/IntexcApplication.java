@@ -24,7 +24,9 @@ public class IntexcApplication extends Application {
         List<Question> questions = new ArrayList<Question>();
         Question question = new Question();
         question.question = "Что такое любовь";
-        question.answers = new String[]{"Любовь", "Хз", "Дэб"};
+        question.wrans1 = "дэб";
+        question.wrans2 = "кек";
+        question.rightans = "реакция";
         questions.add(question);
         exc1.questions = questions;
         excursionDao.insert(exc1);
