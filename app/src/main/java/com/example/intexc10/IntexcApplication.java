@@ -20,15 +20,5 @@ public class IntexcApplication extends Application {
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "Excursions").build();
         excursionDao = db.excursionDao();
         Excursion exc1 = new Excursion();
-        exc1.name = "Тестовая Экскурсия";
-        List<Question> questions = new ArrayList<Question>();
-        Question question = new Question();
-        question.question = "Что такое любовь";
-        question.wrans1 = "дэб";
-        question.wrans2 = "кек";
-        question.rightans = "реакция";
-        questions.add(question);
-        exc1.questions = questions;
-        excursionDao.insert(exc1);
     }
 }

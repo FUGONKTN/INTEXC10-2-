@@ -12,6 +12,7 @@ import java.util.List;
 
 @Dao
 public interface ExcursionDao {
+
     @Query("SELECT * FROM Excursion")
     List<Excursion> getAllExcursions();
     @Query("SELECT name FROM Excursion WHERE ExcId = :id")
@@ -30,14 +31,18 @@ public interface ExcursionDao {
     Double getLatThree(int id);
     @Query("SELECT LatitudeThree FROM excursion WHERE ExcId = :id")
     Double getLongThree(int id);
-    @Query("SELECT RightAnswerIndex FROM Question WHERE QuestId = :id")
-    Integer getRightAnswer(int id);
-    @Query("SELECT WrongAnsOne FROM Question WHERE QuestId = :id")
-    String getWrOne(int id);
-    @Query("SELECT WrongAnsTwo FROM Question WHERE QuestId = :id")
-    String getWrTwo(int id);
-    @Query("SELECT RightAns FROM Question WHERE QuestId = :id")
-    String getRightAns(int id);
+    @Query("SELECT QuestionOne FROM Question WHERE QuestId = :id")
+    String getQuestionOne(int id);
+    @Query("SELECT QuestionTwo FROM Question WHERE QuestId = :id")
+    String getQuestionTwo(int id);
+    @Query("SELECT QuestionThree FROM Question WHERE QuestId = :id ")
+    String getQuestionThree(int id);
+    @Query ("SELECT AnsOne FROM Question WHERE QuestId = :id")
+    String getAnswerOne(int id);
+    @Query("SELECT AnsTwo FROM Question WHERE QuestId = :id")
+    String getAnswerTwo(int id);
+    @Query("SELECT AnsThree FROM Question WHERE QuestId = :id")
+    String getAnswerThree(int id);
     @Insert
     void insert(Excursion... excursions);
     @Delete

@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 public class Excursion {
-        @Embedded public List<Question> questions;
+        @Embedded public Question question;
 
         @PrimaryKey
         public int ExcId;

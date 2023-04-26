@@ -8,14 +8,17 @@ import androidx.room.PrimaryKey;
 public class Question {
     @PrimaryKey
     public int QuestId;
-    @ColumnInfo(name = "Question")
+    @ColumnInfo(name = "QuestionOne")
+    public String questionone;
+    @ColumnInfo( name = "QuestionTwo")
+    public String questiontwo;
+    @ColumnInfo(name = "QuestionThree")
+    public String questionthree;
     public String question;
-    @ColumnInfo(name = "WrongAnsOne")
-    public String wrans1;
-    @ColumnInfo(name = "WrongAnsTwo")
-    public String wrans2;
-    @ColumnInfo(name = "RightAns")
-    public String rightans;
-    @ColumnInfo(name = "RightAnswerIndex")
-    public int indexright;
+    @ColumnInfo(name = "AnsOne")
+    public String ansone;
+    @ColumnInfo(name = "AnsTwo")
+    public String anstwo;
+    @ColumnInfo(name = "AnsThree")
+    public String ansthree;
 }
