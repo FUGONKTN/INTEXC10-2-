@@ -19,25 +19,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChooseExc extends ListActivity {
-    ListView lv;
+
     ExcursionDao excursionDao;
+    String[] names = {"Тестовая экскурсия", "Ещё тестовая экскурсия"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String[] names = {"Тестовая экскурсия", "Ещё тестовая экскурсия"};
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_exc);
         excursionDao = ((IntexcApplication) getApplication()).excursionDao;
-        lv = findViewById(R.id.ExcursionsView);
-        ArrayAdapter<String> namesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
-        lv.setAdapter(namesAdapter);
-
+        ArrayAdapter<String> excadapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, names);
+        setListAdapter(excadapter);
     }
     @Override
     protected void onListItemClick(ListView l, View V, int position, long id){
-        Toast.makeText(this, position, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, (int)id, Toast.LENGTH_SHORT).show();
+        String name = excursionDao.getName(position);
+        String questionOne = excursionDao.getQuestionOne(position);
+        Toast.makeText(this, name + " " + questionOne, Toast.LENGTH_SHORT).show();
+        Intent intt = new Intent(this, MapActivity.class);
+        startActivity(intt);
 
     }
+
+
 }
 
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class Excursion {
         @Embedded public Question question;
 
-        @PrimaryKey
+        @PrimaryKey(autoGenerate = true)
         public int ExcId;
 
         @ColumnInfo(name = "Name")

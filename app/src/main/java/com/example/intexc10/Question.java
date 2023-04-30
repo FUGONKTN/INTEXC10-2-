@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Question {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int QuestId;
     @ColumnInfo(name = "QuestionOne")
     public String questionone;
